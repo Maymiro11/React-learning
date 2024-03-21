@@ -1,9 +1,30 @@
-// src/App.jsx
+import React from "react";
 
-import MailBox from "./MailBox";
-import Product from "./Product";
+import LoginForm from './LoginForm';
+import SearchBar from "./SearchBar";
+import LangSwitcher from './LangSwitcher';
+import RadioButton from './RadioButton';
+import CheckBox from './CheckBox';
+import FeedbackForm from './FeedbackForm';
 
-const meestExpressUsers = [
+const App = () => {
+  // Колбек-функція для обробки сабміту форми
+  const handleLogin = (userData) => {
+    // Виконуємо необхідні операції з даними
+    console.log(userData);
+  };
+
+  return (
+    <div>
+      <FeedbackForm />
+     
+    </div>
+  );
+};
+
+export default App;
+
+/*const meestExpressUsers = [
   { id: 1, userEmail: "alex@gmail.com" },
   { id: 2, userEmail: "anna@gmail.com" },
   { id: 3, userEmail: "qwerty@gmail.com" },
@@ -30,15 +51,17 @@ export default function App() {
       <Product />
       <Product />
 
-<MailBox boxUsers={meestExpressUsers} 
+      <MailBox boxUsers={meestExpressUsers} 
         boxtitle="Meest expres" 
         mailBoxCount={3}/>
-<MailBox boxUsers={novaPoshtaUsers}
+      <MailBox boxUsers={novaPoshtaUsers}
         boxtitle="Nova poshta"  
         mailBoxCount={5}/>
-<MailBox boxUsers={ukrPoshtaUsers}
+      <MailBox boxUsers={ukrPoshtaUsers}
         boxtitle="Ukrposhta" />
 
+      <Button />
     </div>
   );
 }
+*/
